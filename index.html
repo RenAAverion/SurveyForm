@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content ="width=device-width,initial-scale=1.0"/>
+   <link rel="stylesheet" href="styles.css">
+   <title>Survey Corps. Form</title>
+  </head>
+  <body>
+    <main class="header">
+    <h1 id="title">Survey Corps. Survey</h1>
+    <p id="description">This survey form serves as an evaluation for the quality of service of Survey Corps.Your feedback would be of value to us!</p>
+    </main>
+    <form id="survey-form" action="/submit.php" method="POST" >
+      <fieldset class="basic-info">
+        <legend>Basic Information</legend>
+        <label id="name-label">Name:
+            <input id="name" type="text" placeholder="ex. Eren Jeager" required>
+        </label>
+        <label id="email-label" >Email:
+            <input id="email" type="email" placeholder="ex. eren@gmail.com" required>
+        </label>
+        <label id="number-label" >Age:
+            <input id="number" type="number" min="14" max="120" placeholder="ex. 22">
+        </label>
+      </fieldset>
+      <fieldset class="position">
+        <legend>Position in society</legend>
+        <select id="dropdown"> 
+          <option value="">(Select one)</option>
+          <option value="1">Royalty</option>
+          <option value="2">Government Personnel</option>
+          <option value="3">Soldier</option>
+          <option value="4">Townsfolk</option>
+        </select>
+      </fieldset>
+      <fieldset class="SCperf">
+        <legend>Survey Corps performance</legend>
+        <label for="excellent">
+          <input type="radio" checked id="excellent" name="perf" value="excellent">Excellent
+        </label>
+        <label for="mediocre">
+          <input type="radio" id="mediocre" name="perf" value="mediocre">Mediocre
+        </label>
+        <label for="poor">
+          <input type="radio" id="poor" name="perf" value="poor">Poor
+        </label>
+      </fieldset>
+      <fieldset class="services">
+        <legend>Services that you liked</legend>
+        <input id="exploration" type="checkbox" value="exp" name="services"><label>Exploration </label>
+        <input id="Reclamation" type="checkbox" value="rec" name="services"><label>Reclamation</label>
+        <input id="Research" type="checkbox" value="res" name="services"><label>Research</label>
+        <input id="Combat" type="checkbox" value="com" name="services"> <label>Combat</label>
+      </fieldset>
+      <fieldset class="suggestion">
+        <legend>Suggestions</legend>
+        <textarea placeholder="Go beyond the sea" row="16" cols="30"></textarea>
+      </fieldset>
+        <input type="submit" id="submit">
+    </form>
+  </body>
+</html>
